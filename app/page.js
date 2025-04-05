@@ -66,7 +66,7 @@ export default function Home() {
         </div>
 
         {/* Collaboration Section */}
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl col-span-1 md:col-span-2 flex flex-col md:flex-row items-center justify-between transition hover:bg-white/10 group order-3 mt-6 hover:shadow-lg">
+        <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl col-span-1 md:col-span-2 flex flex-col md:flex-row items-center justify-between transition hover:bg-white/10 group order-3 hover:shadow-lg">
           <div className="flex items-center mb-4 md:mb-0">
             <FiMail className="w-8 h-8 text-blue-400 mr-4 group-hover:animate-pulse transition-transform group-hover:scale-110" />
             <h3 className="text-lg md:text-xl font-medium tracking-wide">
