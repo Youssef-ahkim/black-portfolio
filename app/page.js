@@ -13,19 +13,19 @@ export default function Home() {
               width={160}
               height={160}
               className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/20 group-hover:border-blue-400 transition-all duration-300 mb-6"
-              alt="Jeff Maine profile picture"
+              alt="Youssef Ahkim profile picture"
               priority
             />
           </div>
           <div className="text-center">
             <div className="flex items-center gap-3 mb-3 justify-center">
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text text-transparent">
-                Jeff Maine
+                Youssef Ahkim
               </h2>
               <FiAward className="w-6 h-6 md:w-7 md:h-7 text-yellow-400 flex-shrink-0 animate-pulse" />
             </div>
             <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed mb-8 max-w-[280px] mx-auto">
-              Talented and passionate graphic designer creating impactful visual solutions
+              Experienced Full-stack Developer specializing in creating robust and scalable web applications.
             </p>
           </div>
         </div>
@@ -42,9 +42,9 @@ export default function Home() {
           {/* Stats Grid */}
           <div className="grid grid-cols-3 gap-4">
             {[
-              { icon: <FiBriefcase className="w-7 h-7 text-yellow-400 mb-2" />, label: "Experience", value: "08+" },
-              { icon: <FiUsers className="w-7 h-7 text-green-400 mb-2" />, label: "Clients", value: "125+" },
-              { icon: <FiFolder className="w-7 h-7 text-blue-400 mb-2" />, label: "Projects", value: "170+" },
+              { icon: <FiBriefcase className="w-7 h-7 text-yellow-400 mb-2" />, label: "Experience", value: "5+" },
+              { icon: <FiUsers className="w-7 h-7 text-green-400 mb-2" />, label: "Clients", value: "50+" },
+              { icon: <FiFolder className="w-7 h-7 text-blue-400 mb-2" />, label: "Projects", value: "75+" },
             ].map((item, index) => (
               <div 
                 key={index}
@@ -61,7 +61,7 @@ export default function Home() {
           <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10  hover:border-blue-400/30">
             <FiAward className="w-8 h-8 text-blue-400 mb-3 group-hover/credential:animate-spin" />
             <h3 className="text-sm font-medium tracking-wider mb-1">Credentials</h3>
-            <span className="text-xs text-gray-400 group-hover/credential:text-blue-400 transition-colors">Adobe Certified</span>
+            <span className="text-xs text-gray-400 group-hover/credential:text-blue-400 transition-colors">Certified Full-stack Developer</span>
           </div>
         </div>
 
