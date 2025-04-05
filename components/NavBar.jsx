@@ -64,7 +64,7 @@ const NavBar = () => {
   );
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/5 backdrop-blur-lg border-b border-white/10 shadow-xl">
+    <nav className=" top-0 w-full z-50 bg-white/5 backdrop-blur-lg border-b border-white/10 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 relative">
           {/* Logo */}
@@ -109,7 +109,7 @@ const NavBar = () => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 -translate-y-2"
       >
-        <div className="md:hidden bg-white/5 backdrop-blur-lg border-t border-white/10 px-4 pb-6">
+        <div className="md:hidden bg-white/2 backdrop-blur-lg border-t border-white/10 px-4 pb-6">
           <div className="space-y-3 pt-4">
             {navigation.map((item) => (
               <a

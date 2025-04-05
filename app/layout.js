@@ -22,7 +22,7 @@ import NavBar from "@/components/NavBar";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="relative w-full h-screen">
+      <body className="relative w-full min-h-screen">
         {/* Background Image */}
         <Image
           src="/bg.png"
