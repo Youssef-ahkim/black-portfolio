@@ -6,7 +6,7 @@ export default function Home() {
     <div className="text-white flex justify-center items-center p-4 md:p-6 xl:h-[90vh]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full relative z-10">
         {/* Left Column - Profile Section */}
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl p-6 md:p-8 rounded-xl flex flex-col transition hover:bg-white/10 group order-1 hover:shadow-lg hover:transform hover:scale-[1.01]">
+        <div className="animate-pop-in [animation-delay:100ms] opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl p-6 md:p-8 rounded-xl flex flex-col transition hover:bg-white/10 group order-1 hover:shadow-lg hover:transform hover:scale-[1.01]">
           <div className="relative flex-shrink-0 mx-auto">
             <Image 
               src="/me.jpg" 
@@ -36,7 +36,7 @@ export default function Home() {
           <a
             href="/me.pdf"
             download="Youssef_Ahkim_CV.pdf"
-            className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10 cursor-pointer group/download hover:border-blue-400/30"
+            className="animate-pop-in [animation-delay:200ms] opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10 cursor-pointer group/download hover:border-blue-400/30"
           >
             <FiDownload className="w-8 h-8 text-purple-400 mb-3 group-hover/download:animate-bounce" />
             <h3 className="text-sm font-medium tracking-wider mb-1">Download CV</h3>
@@ -52,7 +52,8 @@ export default function Home() {
             ].map((item, index) => (
               <div 
                 key={index}
-                className="bg-white/5 backdrop-blur-lg border border-white/10 p-4 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10 hover:transform hover:scale-105"
+                className="animate-pop-in opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 p-4 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10 hover:transform hover:scale-105"
+                style={{ animationDelay: `${300 + (index * 100)}ms` }}
               >
                 {item.icon}
                 <h3 className="text-xs font-medium tracking-wider">{item.label}</h3>
@@ -62,7 +63,7 @@ export default function Home() {
           </div>
 
           {/* Credentials */}
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10  hover:border-blue-400/30">
+          <div className="animate-pop-in [animation-delay:600ms] opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10  hover:border-blue-400/30">
             <FiAward className="w-8 h-8 text-blue-400 mb-3 group-hover/credential:animate-spin" />
             <h3 className="text-sm font-medium tracking-wider mb-1">Credentials</h3>
             <span className="text-xs text-gray-400 group-hover/credential:text-blue-400 transition-colors">Certified Full-stack Developer</span>
@@ -70,14 +71,14 @@ export default function Home() {
         </div>
 
         {/* Collaboration Section */}
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl col-span-1 md:col-span-2 flex flex-col md:flex-row items-center justify-between transition hover:bg-white/10 group order-3 hover:shadow-lg">
+        <div className="animate-pop-in [animation-delay:700ms] opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl col-span-1 md:col-span-2 flex flex-col md:flex-row items-center justify-between transition hover:bg-white/10 group order-3 hover:shadow-lg">
           <div className="flex items-center mb-4 md:mb-0">
             <FiMail className="w-8 h-8 text-blue-400 mr-4 group-hover:animate-pulse transition-transform group-hover:scale-110" />
             <h3 className="text-lg md:text-xl font-medium tracking-wide">
               Let's work <span className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300">together</span>
             </h3>
           </div>
-          <button className="px-6 py-2.5 text-sm bg-blue-500/20 border border-blue-500/30 rounded-lg hover:bg-blue-500/30 transition-all duration-300 flex items-center gap-2 hover:gap-3 hover:transform hover:scale-105">
+          <button className="px-6 py-2.5 text-sm bg-blue-500/20 border cursor-pointer border-blue-500/30 rounded-lg hover:bg-blue-500/30 transition-all duration-300 flex items-center gap-2 hover:gap-3 hover:transform hover:scale-105">
             <FiMail className="w-5 h-5 transition-transform group-hover:scale-125" />
             Get in touch
           </button>

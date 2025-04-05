@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import { FiBriefcase } from 'react-icons/fi';
+import Image from 'next/image';
 
 const navigation = [
   { name: 'Home', href: '#home' },
@@ -13,8 +14,10 @@ const navigation = [
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 2;
       const sections = document.querySelectorAll('section');
@@ -64,16 +67,23 @@ const NavBar = () => {
   );
 
   return (
-    <nav className=" top-0 w-full z-50 bg-white/5 backdrop-blur-lg border-b border-white/10 shadow-xl">
+    <nav className="animate-slide-and-pop opacity-0 top-0 w-full z-50 bg-white/5 backdrop-blur-lg border-b border-white/10 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 relative">
           {/* Logo */}
-          <a href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Logo
+          <a href="/" className="animate-pop-in [animation-delay:150ms] opacity-0">
+            <Image 
+              src="/logo.png" 
+              width={160}
+              height={160}
+              className="w-10 h-10 md:w-10 md:h-10"
+              alt="LOGO"
+              priority
+            />
           </a>
 
           {/* Centered Desktop Navigation */}
-          <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 animate-pop-in [animation-delay:300ms] opacity-0">
             <div className="flex items-center gap-4">
               {navigation.map((item) => (
                 <NavLink key={item.name} href={item.href}>
@@ -84,7 +94,7 @@ const NavBar = () => {
           </div>
 
           {/* Right Section */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 animate-pop-in [animation-delay:450ms] opacity-0">
             <a
               href="#contact"
               className="hidden md:flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 rounded-full
