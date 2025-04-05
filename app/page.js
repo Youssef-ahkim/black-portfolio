@@ -33,11 +33,15 @@ export default function Home() {
         {/* Right Column - Stats and Actions */}
         <div className="space-y-6 order-2">
           {/* Download CV */}
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10 cursor-pointer group/download hover:border-blue-400/30">
+          <a
+            href="/me.pdf"
+            download="Youssef_Ahkim_CV.pdf"
+            className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex flex-col items-center justify-center transition hover:bg-white/10 cursor-pointer group/download hover:border-blue-400/30"
+          >
             <FiDownload className="w-8 h-8 text-purple-400 mb-3 group-hover/download:animate-bounce" />
             <h3 className="text-sm font-medium tracking-wider mb-1">Download CV</h3>
             <span className="text-xs text-gray-400 group-hover/download:text-purple-400 transition-colors">PDF Format ↓</span>
-          </div>
+          </a>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-3 gap-4">
