@@ -17,7 +17,7 @@ const navigation = [
   { id: 'contact', name: 'Contact', href: '#' },
 ];
 
-export default function NavBar() {
+export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [isOpen, setIsOpen] = useState(false);
 
