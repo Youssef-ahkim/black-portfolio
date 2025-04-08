@@ -1,12 +1,11 @@
 import "./globals.css";
-;
 
 export const metadata = {
   title: "Portfolio",
-  description: "Your ",
+  description: "Your Portfolio Description",
 };
+
 import Image from "next/image";
-import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
@@ -19,14 +18,14 @@ export default function RootLayout({ children }) {
           layout="fill"
           objectFit="cover"
           className="-z-10"
+          priority
         />
 
         {/* Page Content */}
-{children}
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );
 }
-
-
-

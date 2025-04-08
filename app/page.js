@@ -149,7 +149,7 @@ export default function App() {
       </nav>
 
       {/* Render Active Component */}
-      <div className="min-h-screen">
+      <div className="xl:h-[85vh] xl:mt-10 mt-4">
         {componentMap[activeTab]}
       </div>
     </div>

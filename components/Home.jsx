@@ -3,7 +3,7 @@ import { FiDownload, FiAward, FiBriefcase, FiUsers, FiFolder, FiMail } from 'rea
 
 export default function Home() {
   return (
-    <div idd="home" className="text-white flex justify-center items-center p-4 md:p-6 xl:h-[90vh]">
+    <div idd="home" className="text-white flex justify-center items-center ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full relative z-10">
         {/* Left Column - Profile Section */}
         <div className="animate-pop-in [animation-delay:100ms] opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl p-6 md:p-8 rounded-xl flex flex-col transition hover:bg-white/10 group order-1 hover:shadow-lg hover:transform hover:scale-[1.01]">

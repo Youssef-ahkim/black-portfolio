@@ -3,7 +3,7 @@ import { FiDownload, FiAward, FiBriefcase, FiUsers, FiFolder, FiMail } from 'rea
 
 export default function About() {
   return (
-    <div id="about" className="text-white p-4 md:p-6 xl:h-[90vh]">
+    <div id="about" className="text-white ">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Profile Section */}
