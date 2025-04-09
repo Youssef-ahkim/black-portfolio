@@ -7,7 +7,7 @@ export default function About({ setActiveTab }) {
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Profile Section */}
-          <div className="animate-pop-in [animation-delay:100ms] opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl p-6 md:p-8 rounded-xl flex flex-col transition hover:bg-white/10 group">
+          <div className=" bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl p-6 md:p-8 rounded-xl flex flex-col transition hover:bg-white/10 group">
             <div className="relative flex-shrink-0 mx-auto">
               <Image 
                 src="/me.jpg" 
