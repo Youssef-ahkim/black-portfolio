@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="relative w-full min-h-screen">
+      <body className="relative w-full min-h-screen" >
         {/* Background Image */}
         <Image
           src="/bg.png"
