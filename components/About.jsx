@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FiDownload, FiAward, FiBriefcase, FiUsers, FiFolder, FiMail } from 'react-icons/fi';
+import {FiAward, FiMail } from 'react-icons/fi';
 
 export default function About({ setActiveTab }) {
   return (
