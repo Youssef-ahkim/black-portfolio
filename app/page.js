@@ -126,7 +126,7 @@ export default function App() {
                     setIsOpen(false);
                   }}
                   className="block px-4 py-3 rounded-lg text-gray-300 transition-colors
-                             duration-200 hover:bg-white/10 hover:text-cyan-300"
+                             duration-200 hover:bg-white/10 hover:text-cyan-300 w-full"
                 >
                   {item.name}
                 </button>
@@ -136,9 +136,9 @@ export default function App() {
                   setActiveTab('contact');
                   setIsOpen(false);
                 }}
-                className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg
                            text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all
-                           shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30"
+                           shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 w-full text-center"
               >
                 <FiBriefcase className="w-4 h-4" />
                 Hire Me
