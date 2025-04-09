@@ -43,8 +43,8 @@ export default function App() {
 
   // Map component imports
   const componentMap = {
-    home: <Home />,
-    about: <About />,
+    home: <Home setActiveTab={setActiveTab} />,  // Pass setActiveTab as prop
+    about: <About setActiveTab={setActiveTab} />,
     services: <Services />,
     contact: <Contact />,
   };

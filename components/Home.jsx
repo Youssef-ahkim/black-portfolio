@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FiDownload, FiAward, FiBriefcase, FiUsers, FiFolder, FiMail } from 'react-icons/fi';
 
-export default function Home() {
+export default function Home({ setActiveTab }) {
   return (
     <div idd="home" className="text-white flex justify-center items-center ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full relative z-10">
@@ -78,7 +78,7 @@ export default function Home() {
               Let's work <span className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300">together</span>
             </h3>
           </div>
-          <button className="px-6 py-2.5 text-sm bg-blue-500/20 border cursor-pointer border-blue-500/30 rounded-lg hover:bg-blue-500/30 transition-all duration-300 flex items-center gap-2 hover:gap-3 hover:transform hover:scale-105">
+          <button onClick={() => setActiveTab('contact')} className="px-6 py-2.5 text-sm bg-blue-500/20 border cursor-pointer border-blue-500/30 rounded-lg hover:bg-blue-500/30 transition-all duration-300 flex items-center gap-2 hover:gap-3 hover:transform hover:scale-105">
             <FiMail className="w-5 h-5 transition-transform group-hover:scale-125" />
             Get in touch
           </button>

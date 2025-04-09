@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FiDownload, FiAward, FiBriefcase, FiUsers, FiFolder, FiMail } from 'react-icons/fi';
 
-export default function About() {
+export default function About({ setActiveTab }) {
   return (
     <div id="about" className="text-white ">
       <div className="max-w-5xl mx-auto">
@@ -62,9 +62,9 @@ export default function About() {
               Let's collaborate on your next project!
             </h3>
           </div>
-          <button className="px-6 py-2.5 text-sm bg-blue-500/20 border border-blue-500/30 rounded-lg hover:bg-blue-500/30 transition-all duration-300 flex items-center gap-2 hover:scale-105">
-            <FiMail className="w-5 h-5 transition-transform" />
-            Contact Me
+          <button onClick={() => setActiveTab('contact')} className="px-6 py-2.5 text-sm bg-blue-500/20 border cursor-pointer border-blue-500/30 rounded-lg hover:bg-blue-500/30 transition-all duration-300 flex items-center gap-2 hover:gap-3 hover:transform hover:scale-105">
+            <FiMail className="w-5 h-5 transition-transform group-hover:scale-125" />
+            Get in touch
           </button>
         </div>
       </div>
