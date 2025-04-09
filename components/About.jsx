@@ -37,7 +37,7 @@ export default function About() {
             <div className="animate-pop-in [animation-delay:200ms] opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl transition hover:bg-white/10">
               <h3 className="text-xl font-bold mb-3">My Journey</h3>
               <p className="text-gray-400 text-base leading-relaxed">
-                With over 5 years of professional experience, I have honed my skills as a Full-stack Developer working on diverse projects. I thrive on solving complex challenges and building scalable applications that drive real business value.
+                With over 1 years of professional experience, I have honed my skills as a Full-stack Developer working on diverse projects. I thrive on solving complex challenges and building scalable applications that drive real business value.
               </p>
             </div>
             {/* Technical Expertise */}

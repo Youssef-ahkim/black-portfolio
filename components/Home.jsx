@@ -46,7 +46,7 @@ export default function Home() {
           {/* Stats Grid */}
           <div className="grid grid-cols-3 gap-4">
             {[
-              { icon: <FiBriefcase className="w-7 h-7 text-yellow-400 mb-2" />, label: "Experience", value: "+1" },
+              { icon: <FiBriefcase className="w-7 h-7 text-yellow-400 mb-2" />, label: "Experience", value: "1+" },
               { icon: <FiUsers className="w-7 h-7 text-green-400 mb-2" />, label: "Clients", value: "5+" },
               { icon: <FiFolder className="w-7 h-7 text-blue-400 mb-2" />, label: "Projects", value: "5+" },
             ].map((item, index) => (
