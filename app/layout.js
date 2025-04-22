@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Youssef Ahkim Portfolio",
-  description: "Welcome to my portfolio",,
+  description: "Welcome to my portfolio",
 };
 
 import Image from "next/image";
