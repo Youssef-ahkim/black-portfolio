@@ -46,17 +46,14 @@ const ProjectsPage = () => {
                 />
               </div>
 
-              {/* Title */}
               <h2 className="text-xl md:text-2xl font-semibold mb-2 bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text text-transparent">
                 {project.title}
               </h2>
 
-              {/* Description */}
               <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-4">
                 {project.Description}
               </p>
 
-              {/* Link Button */}
               <Link
                 href={project.link}
                 target="_blank"

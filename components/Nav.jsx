@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from 'react';
 import { Transition } from '@headlessui/react';
-import { FiBriefcase } from 'react-icons/fi';
+import { HiOutlineHand   } from 'react-icons/hi';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -78,7 +78,7 @@ export default function Nav() {
                         text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all
                         shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 hover:scale-[1.02]"
                         >
-                            <FiBriefcase className="w-4 h-4" />
+                            <HiOutlineHand   className="w-4 h-4" />
                             Hire Me
                         </Link>
 
@@ -130,7 +130,7 @@ export default function Nav() {
                    shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 hover:scale-[1.02]"
                             onClick={() => setIsOpen(false)}
                         >
-                            <FiBriefcase className="w-4 h-4" />
+                            <HiOutlineHand   className="w-4 h-4" />
                             Hire Me
                         </Link>
                     </div>
