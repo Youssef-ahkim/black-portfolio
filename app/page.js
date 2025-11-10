@@ -1,156 +1,126 @@
 'use client'
-import { useState } from 'react';
-import { Transition } from '@headlessui/react';
-import { FiBriefcase } from 'react-icons/fi';
-import Image from 'next/image';
+import Image from "next/image";
+import { FiBriefcase, FiFolder, FiDownload, FiAward, FiMail } from 'react-icons/fi';
+import Link from 'next/link';
 
-// Import your components (adjust paths as needed)
-import Home from '@/components/Home';
-import About from '@/components/About';
-import Services from '@/components/Services';
-import Contact from '@/components/Contact';
-
-const navigation = [
-  { id: 'home', name: 'Home', href: '#' },
-  { id: 'about', name: 'About', href: '#' },
-  { id: 'services', name: 'Services', href: '#' },
-  { id: 'contact', name: 'Contact', href: '#' },
-];
-
-export default function App() {
-  const [activeTab, setActiveTab] = useState('home');
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Custom NavLink component that highlights the active tab
-  const NavLink = ({ item }) => {
-    const isActive = activeTab === item.id;
-    return (
-      <button
-        onClick={() => {
-          setActiveTab(item.id);
-          setIsOpen(false); // Close mobile menu when a tab is clicked
-        }}
-        className={`relative px-4 py-2 text-sm transition-colors duration-300 ${
-          isActive ? 'text-cyan-300' : 'text-gray-300 hover:text-cyan-300'
-        } after:absolute after:bottom-0 after:left-1/2 
-          after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all 
-          after:duration-300 hover:after:w-full hover:after:left-0`}
-      >
-        {item.name}
-      </button>
-    );
-  };
-
-  // Map component imports
-  const componentMap = {
-    home: <Home setActiveTab={setActiveTab} />,  // Pass setActiveTab as prop
-    about: <About setActiveTab={setActiveTab} />,
-    services: <Services />,
-    contact: <Contact />,
-  };
-
+export default function Home() {
   return (
-    <div>
-      <nav className="animate-slide-and-pop opacity-0 top-0 w-full z-50 bg-white/5 backdrop-blur-lg border-b border-white/10 shadow-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 relative">
-            {/* Logo */}
-            <button 
-              onClick={() => setActiveTab('home')}
-              className="animate-pop-in [animation-delay:150ms] opacity-0"
-            >
-              <Image 
-                src="/logo.png" 
+    <div className="text-white pt-24">
+      <div className="max-w-5xl mx-auto p-4 space-y-12">
+
+        {/* Profile + About Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* Profile */}
+          <div
+            className="bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl p-4 md:p-6 rounded-xl flex flex-col transition hover:bg-white/10 animate-slide-pop-ease opacity-0"
+            style={{ animationDelay: '0.2s' }}
+          >
+            <div className="relative flex-shrink-0 mx-auto">
+              <Image
+                src="/me.jpg"
                 width={160}
                 height={160}
-                className="w-10 h-10 md:w-10 md:h-10"
-                alt="LOGO"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/20 group-hover:border-blue-400 transition-all duration-300 mb-6"
+                alt="Youssef Ahkim profile picture"
                 priority
               />
-            </button>
-
-            {/* Centered Desktop Navigation */}
-            <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 animate-pop-in [animation-delay:300ms] opacity-0">
-              <div className="flex items-center gap-4">
-                {navigation.map((item) => (
-                  <NavLink key={item.id} item={item} />
-                ))}
-              </div>
             </div>
+            <div className="text-center">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text text-transparent">
+                Youssef Ahkim
+              </h2>
+              <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed mb-8 max-w-[280px] mx-auto">
+                Experienced Full-stack Developer specializing in creating robust and scalable web applications.
+              </p>
+            </div>
+          </div>
 
-            {/* Right Section */}
-            <div className="flex items-center gap-4 animate-pop-in [animation-delay:450ms] opacity-0">
-              <button
-                onClick={() => setActiveTab('contact')}
-                className="hidden md:flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 rounded-full
-                           text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all
-                           shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 hover:scale-[1.02]"
-              >
-                <FiBriefcase className="w-4 h-4" />
-                Hire Me
-              </button>
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 focus:outline-none"
-                aria-label={isOpen ? 'Close menu' : 'Open menu'}
-              >
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  {isOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
-                  )}
-                </svg>
-              </button>
+          {/* About Details */}
+          <div className="flex flex-col justify-between gap-4">
+            <div
+              className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl transition hover:bg-white/10 animate-slide-pop-ease opacity-0"
+              style={{ animationDelay: '0.4s' }}
+            >
+              <h3 className="text-xl font-bold mb-3">My Journey</h3>
+              <p className="text-gray-400 text-base leading-relaxed">
+                With over 1 year of professional experience, I have honed my skills as a Full-stack Developer working on diverse projects. I thrive on solving complex challenges and building scalable applications that drive real business value.
+              </p>
+            </div>
+            <div
+              className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl transition hover:bg-white/10 animate-slide-pop-ease opacity-0"
+              style={{ animationDelay: '0.6s' }}
+            >
+              <h3 className="text-xl font-bold mb-3">Technical Expertise</h3>
+              <p className="text-gray-400 text-base leading-relaxed">
+                My technical toolkit includes JavaScript, React, Node.js, and various database systems. I continuously update my skills to stay ahead of industry trends.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <Transition
-          show={isOpen}
-          enter="transition ease-out duration-150"
-          enterFrom="opacity-0 -translate-y-4"
-          enterTo="opacity-100 translate-y-0"
-          leave="transition ease-in duration-125"
-          leaveFrom="opacity-100 translate-y-0"
-          leaveTo="opacity-0 -translate-y-2"
-        >
-          <div className="md:hidden bg-white/2 backdrop-blur-lg border-t border-white/10 px-4 pb-6">
-            <div className="space-y-3 pt-4">
-              {navigation.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    setActiveTab(item.id);
-                    setIsOpen(false);
-                  }}
-                  className="block px-4 py-3 rounded-lg text-gray-300 transition-colors
-                             duration-200 hover:bg-white/10 hover:text-cyan-300 w-full"
-                >
-                  {item.name}
-                </button>
-              ))}
-              <button
-                onClick={() => {
-                  setActiveTab('contact');
-                  setIsOpen(false);
-                }}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg
-                           text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all
-                           shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 w-full text-center"
-              >
-                <FiBriefcase className="w-4 h-4" />
-                Hire Me
-              </button>
-            </div>
-          </div>
-        </Transition>
-      </nav>
+        {/* Stats + CV + Credentials Section */}
+        <div className="flex flex-wrap gap-6">
 
-      {/* Render Active Component */}
-      <div className="xl:h-[85vh] xl:mt-10 mt-4 p-2">
-        {componentMap[activeTab]}
+          {/* CV Download */}
+          <Link
+            href="/me.pdf"
+            download
+            className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex-1 min-w-[250px] flex flex-col items-center justify-center transition hover:bg-white/10 animate-slide-pop-ease opacity-0"
+            style={{ animationDelay: '0.8s' }}
+          >
+            <FiDownload className="w-8 h-8 text-purple-400 mb-3" />
+            <h3 className="text-sm font-medium tracking-wider mb-1">Download CV</h3>
+            <span className="text-xs text-gray-400">PDF Format ↓</span>
+          </Link>
+
+          {/* Stats */}
+          {[
+            { icon: <FiBriefcase className="w-7 h-7 text-yellow-400 mb-2" />, label: "Experience", value: "1+" },
+            { icon: <FiFolder className="w-7 h-7 text-blue-400 mb-2" />, label: "Projects", value: "5+" },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex-1 min-w-[250px] flex flex-col items-center justify-center transition hover:bg-white/10 animate-slide-pop-ease opacity-0"
+              style={{ animationDelay: `${0.9 + idx * 0.1}s` }}
+            >
+              {item.icon}
+              <h3 className="text-xs font-medium tracking-wider">{item.label}</h3>
+              <span className="text-xl font-bold mt-1">{item.value}</span>
+            </div>
+          ))}
+
+          {/* Credentials */}
+          <div
+            className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex-1 min-w-[250px] flex flex-col items-center justify-center transition hover:bg-white/10 animate-slide-pop-ease opacity-0"
+            style={{ animationDelay: '1.2s' }}
+          >
+            <FiAward className="w-8 h-8 text-blue-400 mb-3" />
+            <h3 className="text-sm font-medium tracking-wider mb-1">Credentials</h3>
+            <span className="text-xs text-gray-400">Certified Full-stack Developer</span>
+          </div>
+        </div>
+
+        {/* Collaboration Section */}
+        <div
+          className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex flex-col md:flex-row items-center justify-between transition hover:bg-white/10 animate-slide-pop-ease opacity-0"
+          style={{ animationDelay: '1.5s' }}
+        >
+          <div className="flex items-center mb-4 md:mb-0">
+            <FiMail className="w-8 h-8 text-blue-400 mr-4" />
+            <h3 className="text-lg md:text-xl font-medium">
+              Let's collaborate on your next project!
+            </h3>
+          </div>
+          <Link
+            href="/contact"
+            className="px-6 py-2.5 text-sm bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center gap-2 hover:scale-105 transition-all"
+          >
+            <FiMail className="w-5 h-5" />
+            Get in touch
+          </Link>
+        </div>
+
       </div>
     </div>
   );

@@ -1,30 +1,35 @@
 import "./globals.css";
+import Image from "next/image";
+import Nav from "@/components/Nav";
 
 export const metadata = {
   title: "Youssef Ahkim Portfolio",
   description: "Welcome to my portfolio",
 };
 
-import Image from "next/image";
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="relative w-full min-h-screen" >
+    <html lang="en" className="h-full w-full">
+      <body className="relative min-h-screen w-full ">
         {/* Background Image */}
-        <Image
-          src="/bg.png"
-          alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className="-z-10"
-          priority
-        />
+        <div className="fixed inset-0 -z-10 h-full w-full">
+          <Image
+            src="/bg.jpg"
+            alt="Background"
+            fill
+            className="object-cover object-center"
+            priority
+            quality={100}
+          />
+          {/* Optional overlay for contrast */}
+          <div className="absolute inset-0 bg-black/20" />
+        </div>
 
         {/* Page Content */}
-        <div className="relative z-10">
+        <main className="relative z-10 min-h-screen flex flex-col">
+          <Nav />
           {children}
-        </div>
+        </main>
       </body>
     </html>
   );
