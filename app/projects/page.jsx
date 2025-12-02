@@ -11,7 +11,7 @@ const ProjectsPage = () => {
       title: 'Enigme Telecom',
       Description:
         'Enigme Telecom is a professional website showcasing telecommunication and IT services, including IP telephony, network cabling, and security systems. It highlights the company’s expertise and reliability in delivering modern, customized solutions for businesses.',
-      link: 'https://enigme-xi.vercel.app/',
+      link: 'https://enigmetelecom.ma/',
     },
     {
       Image: '/sorezay.png',

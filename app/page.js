@@ -53,7 +53,7 @@ export default function Home() {
             >
               <h3 className="text-xl font-bold mb-3">Technical Expertise</h3>
               <p className="text-gray-400 text-base leading-relaxed">
-                My technical toolkit includes JavaScript, React, Node.js, and various database systems. I continuously update my skills to stay ahead of industry trends.
+                My technical toolkit includes JavaScript, React, Next.js, and various database systems. I continuously update my skills to stay ahead of industry trends.
               </p>
             </div>
           </div>
