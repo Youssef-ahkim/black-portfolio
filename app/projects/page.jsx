@@ -20,6 +20,13 @@ const ProjectsPage = () => {
         'Sorezay is a professional and responsive website for a logistics company offering reliable transport solutions for wood, glass, packages, and heavy goods. It highlights safety, punctuality, and modern design to reflect the company’s trust and efficiency.',
       link: 'https://sorezay.vercel.app/',
     },
+    {
+      Image: '/dev-events.png',
+      title: 'Dev Events',
+      Description:
+        'Dev Events is a modern platform built with Next.js that allows users to discover, explore, and follow upcoming developer events worldwide. It features a clean UI, server actions, API routes, and advanced caching.',
+      link: 'https://dev-events-nextjs16-eight.vercel.app/',
+    },
   ]
 
   return (
