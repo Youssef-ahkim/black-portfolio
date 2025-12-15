@@ -7,11 +7,24 @@ import { FiExternalLink } from 'react-icons/fi'
 const ProjectsPage = () => {
   const projects = [
     {
+      Image: '/animefier.png',
+      title: 'animefier',
+      Description:
+        'Animefier is a full-stack Next.js application showcasing a decoupled AI pipeline. It uses **Google Gemini 2.5 Flash** for deep image analysis (Computer Vision) to perform reverse prompt engineering. This text is then fed into the **Pollinations.ai (Flux) API** for high-quality, Text-to-Image synthesis. This demonstrates expertise in building production-ready, modular AI systems on a serverless architecture.', link: 'https://animefier.vercel.app/',
+    },
+    {
       Image: '/enigme-redesign.png',
       title: 'Enigme Telecom -Redesign-',
       Description:
         'Enigme Telecom is a professional website showcasing telecommunication and IT services, including IP telephony, network cabling, and security systems. It highlights the company’s expertise and reliability in delivering modern, customized solutions for businesses.',
       link: 'https://enigmetelecom.ma/',
+    },
+    {
+      Image: '/animal-care.png',
+      title: 'Animal Care',
+      Description:
+        'Animal Care is a compassionate pet adoption platform built with Next.js and Tailwind CSS. It features a premium UI with high-performance CSS animations, dynamic routing for pet profiles, and an interactive donation system.',
+      link: 'https://animal-care-sable.vercel.app/',
     },
     {
       Image: '/enigme.png',
@@ -21,26 +34,19 @@ const ProjectsPage = () => {
       link: 'https://enigme-xi.vercel.app/',
     },
     {
+      Image: '/dev-events.png',
+      title: 'Dev Events',
+      Description:
+        'Dev Events is a modern platform built with Next.js that allows users to discover, explore, and follow upcoming developer events worldwide. It features a clean UI, server actions, API routes, and advanced caching.',
+      link: 'https://dev-events-nextjs16-eight.vercel.app/',
+    },
+    {
       Image: '/sorezay.png',
       title: 'Sorezay',
       Description:
         'Sorezay is a professional and responsive website for a logistics company offering reliable transport solutions for wood, glass, packages, and heavy goods. It highlights safety, punctuality, and modern design to reflect the company’s trust and efficiency.',
       link: 'https://sorezay.vercel.app/',
     },
-   {
-   Image: '/dev-events.png',
-   title: 'Dev Events',
-   Description:
-     'Dev Events is a modern platform built with Next.js that allows users to discover, explore, and follow upcoming developer events worldwide. It features a clean UI, server actions, API routes, and advanced caching.',
-   link: 'https://dev-events-nextjs16-eight.vercel.app/',
- },
- {
-   Image: '/animal-care.png',
-   title: 'Animal Care',
-   Description:
-     'Animal Care is a compassionate pet adoption platform built with Next.js and Tailwind CSS. It features a premium UI with high-performance CSS animations, dynamic routing for pet profiles, and an interactive donation system.',
-   link: 'https://animal-care-sable.vercel.app/',
- },
   ]
 
   return (
