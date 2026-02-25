@@ -64,7 +64,7 @@ export default function Home() {
 
           {/* CV Download */}
           <Link
-            href="/me.pdf"
+            href="/youssef-ahkim.pdf"
             download
             className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-xl flex-1 min-w-[250px] flex flex-col items-center justify-center transition hover:bg-white/10 animate-slide-pop-ease opacity-0"
             style={{ animationDelay: '0.8s' }}
