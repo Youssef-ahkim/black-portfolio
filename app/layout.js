@@ -3,13 +3,17 @@ import Image from "next/image";
 import Nav from "@/components/Nav";
 
 export const metadata = {
-  title: "Youssef Ahkim Portfolio",
+  title: 'Youssef Ahkim',
+  verification: {
+    google: 'bWnqsNP-V0CMi7FzbYsPmEhBGrGtM9myyXUvGqQUrso', 
+  },
   description: "Welcome to my portfolio",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full w-full">
+      <meta name="google-site-verification" content="bWnqsNP-V0CMi7FzbYsPmEhBGrGtM9myyXUvGqQUrso" />
       <body className="relative min-h-screen w-full ">
         {/* Background Image */}
         <div className="fixed inset-0 -z-10 h-full w-full">
