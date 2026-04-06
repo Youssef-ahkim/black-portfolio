@@ -7,17 +7,18 @@ import { FiExternalLink } from 'react-icons/fi'
 const ProjectsPage = () => {
   const projects = [
     {
-      Image: '/animefier.png',
-      title: 'animefier',
+      Image: '/zenith.png',
+      title: 'Zenith',
       Description:
-        'Animefier is a full-stack Next.js application showcasing a decoupled AI pipeline. It uses **Google Gemini 2.5 Flash** for deep image analysis (Computer Vision) to perform reverse prompt engineering. This text is then fed into the **Pollinations.ai (Flux) API** for high-quality, Text-to-Image synthesis. This demonstrates expertise in building production-ready, modular AI systems on a serverless architecture.', link: 'https://animefier.vercel.app/',
+      'A high-performance E-commerce storefront built with Next.js and Tailwind CSS, featuring a premium dark-mode UI and seamless client-side navigation. Key implementations include a custom command-palette (CMD+K) for rapid product searching, dynamic filtering for high-spec hardware, and a fully responsive grid layout. This project focuses on delivering a "next-gen" user experience with optimized performance and clean, modular component architecture.',
+      link: 'https://zenith-ruby-eight.vercel.app/',
     },
     {
-      Image: '/enigme-redesign.png',
-      title: 'Enigme Telecom -Redesign-',
+      Image: '/dev-events.png',
+      title: 'Dev Events',
       Description:
-        'Enigme Telecom is a professional website showcasing telecommunication and IT services, including IP telephony, network cabling, and security systems. It highlights the company’s expertise and reliability in delivering modern, customized solutions for businesses.',
-      link: 'https://enigmetelecom.ma/',
+        'Dev Events is a modern platform built with Next.js that allows users to discover, explore, and follow upcoming developer events worldwide. It features a clean UI, server actions, API routes, and advanced caching.',
+      link: 'https://dev-events-nextjs16-eight.vercel.app/',
     },
     {
       Image: '/animal-care.png',
@@ -27,6 +28,13 @@ const ProjectsPage = () => {
       link: 'https://animal-care-sable.vercel.app/',
     },
     {
+      Image: '/animefier.png',
+      title: 'animefier',
+      Description:
+        'Animefier is a full-stack Next.js application showcasing a decoupled AI pipeline. It uses **Google Gemini 2.5 Flash** for deep image analysis (Computer Vision) to perform reverse prompt engineering. This text is then fed into the **Pollinations.ai (Flux) API** for high-quality, Text-to-Image synthesis. This demonstrates expertise in building production-ready, modular AI systems on a serverless architecture.',
+      link: 'https://animefier.vercel.app/',
+    },
+    {
       Image: '/enigme.png',
       title: 'Enigme Telecom',
       Description:
@@ -34,11 +42,11 @@ const ProjectsPage = () => {
       link: 'https://enigme-xi.vercel.app/',
     },
     {
-      Image: '/dev-events.png',
-      title: 'Dev Events',
+      Image: '/enigme-redesign.png',
+      title: 'Enigme Telecom -Redesign-',
       Description:
-        'Dev Events is a modern platform built with Next.js that allows users to discover, explore, and follow upcoming developer events worldwide. It features a clean UI, server actions, API routes, and advanced caching.',
-      link: 'https://dev-events-nextjs16-eight.vercel.app/',
+        'Enigme Telecom is a professional website showcasing telecommunication and IT services, including IP telephony, network cabling, and security systems. It highlights the company’s expertise and reliability in delivering modern, customized solutions for businesses.',
+      link: 'https://enigmetelecom.ma/',
     },
     {
       Image: '/sorezay.png',
