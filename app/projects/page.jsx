@@ -14,32 +14,39 @@ const ProjectsPage = () => {
       link: 'https://zenith-ruby-eight.vercel.app/',
     },
     {
-      Image: '/dev-events.png',
-      title: 'Dev Events',
+      Image: '/logicraft.png',
+      title: 'Logicraft',
       Description:
-        'Dev Events is a modern platform built with Next.js that allows users to discover, explore, and follow upcoming developer events worldwide. It features a clean UI, server actions, API routes, and advanced caching.',
-      link: 'https://dev-events-nextjs16-eight.vercel.app/',
+      'Logicraft is a full-service platform for launching US LLCs, designed for international entrepreneurs. It provides end-to-end solutions including company formation, EIN & BOI compliance, registered agent services, and integration with global payment systems like Stripe, PayPal, Wise, and Mercury. The platform features a high-conversion landing page, structured pricing system, and seamless user experience focused on speed (48h setup) and reliability (100% success rate). Built with Next.js and Tailwind CSS, it demonstrates real-world business logic, service architecture, and production-ready UI/UX.',
+      link: 'https://logicraft-app.vercel.app/',
     },
     {
       Image: '/animal-care.png',
       title: 'Animal Care',
       Description:
-        'Animal Care is a compassionate pet adoption platform built with Next.js and Tailwind CSS. It features a premium UI with high-performance CSS animations, dynamic routing for pet profiles, and an interactive donation system.',
+      'Animal Care is a compassionate pet adoption platform built with Next.js and Tailwind CSS. It features a premium UI with high-performance CSS animations, dynamic routing for pet profiles, and an interactive donation system.',
       link: 'https://animal-care-sable.vercel.app/',
     },
     {
       Image: '/animefier.png',
       title: 'animefier',
       Description:
-        'Animefier is a full-stack Next.js application showcasing a decoupled AI pipeline. It uses **Google Gemini 2.5 Flash** for deep image analysis (Computer Vision) to perform reverse prompt engineering. This text is then fed into the **Pollinations.ai (Flux) API** for high-quality, Text-to-Image synthesis. This demonstrates expertise in building production-ready, modular AI systems on a serverless architecture.',
+      'Animefier is a full-stack Next.js application showcasing a decoupled AI pipeline. It uses **Google Gemini 2.5 Flash** for deep image analysis (Computer Vision) to perform reverse prompt engineering. This text is then fed into the **Pollinations.ai (Flux) API** for high-quality, Text-to-Image synthesis. This demonstrates expertise in building production-ready, modular AI systems on a serverless architecture.',
       link: 'https://animefier.vercel.app/',
     },
     {
       Image: '/enigme.png',
       title: 'Enigme Telecom',
       Description:
-        'Enigme Telecom is a professional website showcasing telecommunication and IT services, including IP telephony, network cabling, and security systems. It highlights the company’s expertise and reliability in delivering modern, customized solutions for businesses.',
+      'Enigme Telecom is a professional website showcasing telecommunication and IT services, including IP telephony, network cabling, and security systems. It highlights the company’s expertise and reliability in delivering modern, customized solutions for businesses.',
       link: 'https://enigme-xi.vercel.app/',
+    },
+    {
+      Image: '/dev-events.png',
+      title: 'Dev Events',
+      Description:
+        'Dev Events is a modern platform built with Next.js that allows users to discover, explore, and follow upcoming developer events worldwide. It features a clean UI, server actions, API routes, and advanced caching.',
+      link: 'https://dev-events-nextjs16-eight.vercel.app/',
     },
     {
       Image: '/enigme-redesign.png',
