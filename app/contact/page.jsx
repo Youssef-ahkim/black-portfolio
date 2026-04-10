@@ -63,127 +63,145 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className="w-full text-white flex justify-center px-4 pt-25 relative overflow-hidden">
-      
-      {/* Notification */}
-      <div className="fixed bottom-6 right-6 z-50 space-y-3">
+    <div id="contact" className="w-full text-white flex justify-center px-4 pt-32 pb-20 relative overflow-hidden">
+
+      {/* Notification Hub */}
+      <div className="fixed bottom-8 right-8 z-50 space-y-4">
         {status === 'success' && (
-          <div className="animate-notification-slide bg-green-900/30 backdrop-blur-lg border border-green-400/30 rounded-xl p-4 pr-10 min-w-[300px] relative shadow-2xl hover:scale-[1.02] cursor-pointer">
-            <div className="flex items-start gap-3">
-              <FiCheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" />
-              <div className="flex-1">
-                <h3 className="font-semibold text-green-100">Message Sent!</h3>
-                <p className="text-sm text-green-300/80 mt-1">I'll respond within 24 hours</p>
+          <div className="animate-notification-slide bg-black/40 backdrop-blur-2xl border border-green-500/30 rounded-2xl p-5 pr-12 min-w-[320px] relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-l-4 border-l-green-500 hover:scale-[1.02] transition-transform cursor-pointer group">
+            <div className="flex items-start gap-4">
+              <div className="p-2 rounded-full bg-green-500/10 text-green-400">
+                <FiCheckCircle className="w-6 h-6 flex-shrink-0" />
               </div>
-              <button onClick={() => setStatus('')} className="absolute top-3 right-3 p-1 hover:text-green-300 transition-colors">
-                <FiX className="w-4 h-4" />
+              <div className="flex-1">
+                <h3 className="font-bold text-white text-lg">Message Sent!</h3>
+                <p className="text-sm text-gray-400 mt-1">I've received your message and will respond shortly.</p>
+              </div>
+              <button onClick={() => setStatus('')} className="absolute top-4 right-4 p-1 text-gray-500 hover:text-white transition-colors">
+                <FiX className="w-5 h-5" />
               </button>
             </div>
-            <div className="absolute bottom-0 left-0 h-0.5 bg-green-400/30 animate-progress" />
+            <div className="absolute bottom-0 left-0 h-1 bg-green-500 animate-progress" />
           </div>
         )}
 
         {status === 'error' && (
-          <div className="animate-notification-slide bg-red-900/30 backdrop-blur-lg border border-red-400/30 rounded-xl p-4 pr-10 min-w-[300px] relative shadow-2xl hover:scale-[1.02] cursor-pointer">
-            <div className="flex items-start gap-3">
-              <FiAlertCircle className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" />
-              <div className="flex-1">
-                <h3 className="font-semibold text-red-100">Sending Failed</h3>
-                <p className="text-sm text-red-300/80 mt-1">Please try again or contact directly</p>
+          <div className="animate-notification-slide bg-black/40 backdrop-blur-2xl border border-red-500/30 rounded-2xl p-5 pr-12 min-w-[320px] relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-l-4 border-l-red-500 hover:scale-[1.02] transition-transform cursor-pointer">
+            <div className="flex items-start gap-4">
+              <div className="p-2 rounded-full bg-red-500/10 text-red-400">
+                <FiAlertCircle className="w-6 h-6 flex-shrink-0" />
               </div>
-              <button onClick={() => setStatus('')} className="absolute top-3 right-3 p-1 hover:text-red-300 transition-colors">
-                <FiX className="w-4 h-4" />
+              <div className="flex-1">
+                <h3 className="font-bold text-white text-lg">Transmission Error</h3>
+                <p className="text-sm text-gray-400 mt-1">Something went wrong. Please try again later.</p>
+              </div>
+              <button onClick={() => setStatus('')} className="absolute top-4 right-4 p-1 text-gray-500 hover:text-white transition-colors">
+                <FiX className="w-5 h-5" />
               </button>
             </div>
-            <div className="absolute bottom-0 left-0 h-0.5 bg-red-400/30 animate-progress" />
+            <div className="absolute bottom-0 left-0 h-1 bg-red-500 animate-progress" />
           </div>
         )}
       </div>
 
-      {/* Form */}
-      <div className="max-w-5xl w-full relative z-10">
-        <div className="animate-pop-in [animation-delay:100ms] opacity-0 bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl p-6 md:p-8 rounded-2xl transition hover:bg-white/10 hover:shadow-blue-500/10 hover:scale-[1.01]">
-          <h2 className="text-3xl font-bold tracking-tight mb-8 flex items-center gap-3 bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text text-transparent">
-            <FiSend className="w-8 h-8 text-blue-400 transition-transform group-hover:rotate-12" />
-            Get in Touch
-          </h2>
+      {/* Form Container */}
+      <div className="max-w-4xl w-full relative z-10">
+        <div className="animate-pop-in opacity-0 glass-card p-8 md:p-12 rounded-[2rem] relative group mt-8">
 
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Name */}
-            <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-4 rounded-lg transition hover:bg-white/10 focus-within:border-blue-400">
-              <label htmlFor="name-input" className="text-sm font-medium text-gray-300 flex items-center gap-2 mb-2">
-                <FiUser className="w-4 h-4 text-blue-400" /> Your Name
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight flex items-center gap-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Let's Connect
+            </h2>
+            <p className="text-gray-400 text-lg mt-4">
+              Have a question or looking to start a project? I'm always open to new opportunities.
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Name Input */}
+            <div className="space-y-3">
+              <label htmlFor="name-input" className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2 px-1">
+                <FiUser className="w-4 h-4 text-blue-400" /> Full Name
               </label>
-              <input
-                id="name-input"
-                type="text"
-                name="name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full bg-transparent focus:outline-none placeholder-gray-500 text-white/90"
-                placeholder="John Doe"
-                autoComplete="name"
-              />
+              <div className="relative group/input">
+                <input
+                  id="name-input"
+                  type="text"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full bg-white/5 border border-white/10 p-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-gray-600 text-white"
+                  placeholder="John Doe"
+                  autoComplete="name"
+                />
+              </div>
             </div>
 
-            {/* Email */}
-            <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-4 rounded-lg transition hover:bg-white/10 focus-within:border-green-400">
-              <label htmlFor="email-input" className="text-sm font-medium text-gray-300 flex items-center gap-2 mb-2">
-                <FiMail className="w-4 h-4 text-green-400" /> Email Address
+            {/* Email Input */}
+            <div className="space-y-3">
+              <label htmlFor="email-input" className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2 px-1">
+                <FiMail className="w-4 h-4 text-purple-400" /> Email Address
               </label>
-              <input
-                id="email-input"
-                type="email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full bg-transparent focus:outline-none placeholder-gray-500 text-white/90"
-                placeholder="john@example.com"
-                autoComplete="email"
-              />
+              <div className="relative group/input">
+                <input
+                  id="email-input"
+                  type="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full bg-white/5 border border-white/10 p-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all placeholder:text-gray-600 text-white"
+                  placeholder="john@example.com"
+                  autoComplete="email"
+                />
+              </div>
             </div>
 
-            {/* Message */}
-            <div className="md:col-span-2 bg-white/5 backdrop-blur-lg border border-white/10 p-4 rounded-lg transition hover:bg-white/10 focus-within:border-purple-400">
-              <label htmlFor="message-input" className="text-sm font-medium text-gray-300 flex items-center gap-2 mb-2">
-                <FiEdit className="w-4 h-4 text-purple-400" /> Your Message
+            {/* Message Input */}
+            <div className="md:col-span-2 space-y-3">
+              <label htmlFor="message-input" className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2 px-1">
+                <FiEdit className="w-4 h-4 text-blue-400" /> Your Message
               </label>
               <textarea
                 id="message-input"
                 name="message"
                 required
-                rows={5}
+                rows={6}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full bg-transparent focus:outline-none placeholder-gray-500 text-white/90 resize-none"
-                placeholder="Let's discuss your project..."
+                className="w-full bg-white/5 border border-white/10 p-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-gray-600 text-white resize-none"
+                placeholder="Tell me about your project or inquiry..."
               />
             </div>
 
-            {/* Submit */}
+            {/* Submit Button */}
             <button
               type="submit"
               disabled={isSubmitting}
-              className="md:col-span-2 w-full px-6 py-3 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-500 hover:to-purple-500 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="md:col-span-2 w-full px-8 py-5 bg-white text-black font-black rounded-2xl hover:scale-[1.01] active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-[0_20px_40px_rgba(255,255,255,0.1)] hover:shadow-[0_25px_50px_rgba(255,255,255,0.15)]"
             >
-              <FiSend className="w-5 h-5" />
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-              <span className="text-xs opacity-70 hidden md:inline">(Typically reply within 24h)</span>
+              <FiSend className={`w-5 h-5 ${isSubmitting ? 'animate-bounce' : 'group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform'}`} />
+              {isSubmitting ? 'Transmitting...' : 'Send Message'}
             </button>
           </form>
 
-          {/* Contact Info */}
-          <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-            <a href="mailto:youssefahkim1234@gmail.com" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
-              <FiMail className="w-4 h-4" />
-              <span>youssefahkim1234@gmail.com</span>
-            </a>
-            <div className="h-4 w-px bg-white/20 hidden md:block"></div>
-            <div className="flex items-center gap-2">
-              <FiBriefcase className="w-4 h-4 text-green-400" />
-              <span>Available for freelance work</span>
+          {/* Alternative Contact */}
+          <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-4 text-gray-400">
+              <a href="mailto:youssefahkim1234@gmail.com" className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full hover:text-white hover:bg-white/10 transition-all">
+                <FiMail className="w-4 h-4 text-blue-400" />
+                <span>youssefahkim1234@gmail.com</span>
+              </a>
+              <div className="hidden md:block w-1.5 h-1.5 rounded-full bg-white/10" />
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full">
+                <FiBriefcase className="w-4 h-4 text-green-400" />
+                <span className="text-sm font-medium">Available for Freelance</span>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              {/* Add social links here if needed */}
             </div>
           </div>
         </div>

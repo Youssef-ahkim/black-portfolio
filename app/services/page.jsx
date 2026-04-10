@@ -28,55 +28,67 @@ export default function Services() {
   ];
 
   const colorMap = {
-    blue: "blue-400",
-    purple: "purple-400",
-    green: "green-400"
+    blue: {
+      text: "text-blue-400",
+      bg: "bg-blue-500/10",
+      border: "border-blue-500/20",
+      glow: "group-hover:shadow-blue-500/20",
+      bar: "bg-blue-500"
+    },
+    purple: {
+      text: "text-purple-400",
+      bg: "bg-purple-500/10",
+      border: "border-purple-500/20",
+      glow: "group-hover:shadow-purple-500/20",
+      bar: "bg-purple-500"
+    },
+    green: {
+      text: "text-green-400",
+      bg: "bg-green-500/10",
+      border: "border-green-500/20",
+      glow: "group-hover:shadow-green-500/20",
+      bar: "bg-green-500"
+    }
   };
 
   return (
-    <section id="services" className="relative overflow-hidden pt-25">
+    <section id="services" className="relative overflow-hidden pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="mb-16 text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <div className="mb-20 text-center space-y-4 animate-slide-pop-ease opacity-0" style={{ animationDelay: '0.1s' }}>
+          <h2 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent">
             Expert Services
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            Comprehensive digital solutions designed to elevate your online presence.
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            Providing high-end digital solutions that combine technical excellence with premium design.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service) => {
-            const color = colorMap[service.color];
+          {services.map((service, idx) => {
+            const styles = colorMap[service.color];
             return (
               <div
                 key={service.title}
-                className={`animate-pop-in [animation-delay:${service.delay}] opacity-0
-                  bg-white/5 backdrop-blur-xl border border-${color}/20
-                  p-8 rounded-2xl transition-all duration-300 ease-out
-                  hover:bg-white/10
-                  hover:-translate-y-2 hover:shadow-xl
-                  group`}
+                className={`animate-pop-in flex flex-col glass-card p-10 rounded-3xl group opacity-0 ${styles.border} ${styles.glow}`}
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
-                <div className="flex flex-col h-full">
-                  <div className={`mb-6 p-3 w-fit rounded-lg bg-${color}/10`}>
-                    {React.cloneElement(service.icon, {
-                      className: `w-12 h-12 mb-4 text-${color} transition-transform group-hover:scale-110`
-                    })}
-                  </div>
+                <div className={`mb-8 p-4 w-16 h-16 rounded-2xl ${styles.bg} flex items-center justify-center transition-transform group-hover:scale-110 group-hover:rotate-6`}>
+                  {React.cloneElement(service.icon, {
+                    className: `w-8 h-8 ${styles.text}`
+                  })}
+                </div>
 
-                  <h3 className="text-2xl font-semibold mb-4 text-gray-100">
-                    {service.title}
-                  </h3>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-500 transition-all">
+                  {service.title}
+                </h3>
 
-                  <p className="text-gray-400 text-lg leading-relaxed flex-1">
-                    {service.description}
-                  </p>
+                <p className="text-gray-400 text-lg leading-relaxed flex-1">
+                  {service.description}
+                </p>
 
-                  <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className={`inline-block w-8 h-1 bg-${color} rounded-full`} />
-                  </div>
+                <div className="mt-10 pt-6 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                  <div className={`w-12 h-1.5 ${styles.bar} rounded-full`} />
                 </div>
               </div>
             );
