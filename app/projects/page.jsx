@@ -4,65 +4,83 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FiExternalLink } from 'react-icons/fi'
 
-const ProjectsPage = () => {
+export default function ProjectsPage() {
   const projects = [
     {
-      Image: '/zenith.png',
+      title: 'Tahanaout Poultry',
+      image: '/chick-project.png',
+      link: 'https://chick-project.vercel.app/',
+      description:
+        'A farm-to-table e-commerce platform for organic poultry. Features high-fidelity product catalogs, local delivery scheduling, and a community-driven subscription model.',
+      technologies: ['Next.js', 'Tailwind CSS', 'E-commerce'],
+    },
+    {
       title: 'Zenith',
-      Description:
-        'A high-performance E-commerce storefront built with Next.js and Tailwind CSS, featuring a premium dark-mode UI and seamless client-side navigation. Key implementations include a custom command-palette (CMD+K) for rapid product searching, dynamic filtering for high-spec hardware, and a fully responsive grid layout. This project focuses on delivering a "next-gen" user experience with optimized performance and clean, modular component architecture.',
+      image: '/zenith.png',
       link: 'https://zenith-ruby-eight.vercel.app/',
+      description:
+        'A premium Next.js & GSAP storefront featuring a CMD+K command palette and immersive scroll-triggered animations. Optimized for 60fps performance with a high-end dark UI.',
+      technologies: ['Next.js', 'GSAP', 'Tailwind CSS', 'TypeScript'],
     },
     {
-      Image: '/logicraft.png',
-      title: 'Logicraft',
-      Description:
-        'Logicraft is a full-service platform for launching US LLCs, designed for international entrepreneurs. It provides end-to-end solutions including company formation, EIN & BOI compliance, registered agent services, and integration with global payment systems like Stripe, PayPal, Wise, and Mercury. The platform features a high-conversion landing page, structured pricing system, and seamless user experience focused on speed (48h setup) and reliability (100% success rate). Built with Next.js and Tailwind CSS, it demonstrates real-world business logic, service architecture, and production-ready UI/UX.',
-      link: 'https://logicraft-app.vercel.app/',
-    },
-    {
-      Image: '/animal-care.png',
-      title: 'Animal Care',
-      Description:
-        'Animal Care is a compassionate pet adoption platform built with Next.js and Tailwind CSS. It features a premium UI with high-performance CSS animations, dynamic routing for pet profiles, and an interactive donation system.',
-      link: 'https://animal-care-sable.vercel.app/',
-    },
-    {
-      Image: '/animefier.png',
-      title: 'animefier',
-      Description:
-        'Animefier is a full-stack Next.js application showcasing a decoupled AI pipeline. It uses **Google Gemini 2.5 Flash** for deep image analysis (Computer Vision) to perform reverse prompt engineering. This text is then fed into the **Pollinations.ai (Flux) API** for high-quality, Text-to-Image synthesis. This demonstrates expertise in building production-ready, modular AI systems on a serverless architecture.',
-      link: 'https://animefier.vercel.app/',
-    },
-    {
-      Image: '/enigme.png',
-      title: 'Enigme Telecom',
-      Description:
-        'Enigme Telecom is a professional website showcasing telecommunication and IT services, including IP telephony, network cabling, and security systems. It highlights the company’s expertise and reliability in delivering modern, customized solutions for businesses.',
-      link: 'https://enigme-xi.vercel.app/',
-    },
-    {
-      Image: '/dev-events.png',
-      title: 'Dev Events',
-      Description:
-        'Dev Events is a modern platform built with Next.js that allows users to discover, explore, and follow upcoming developer events worldwide. It features a clean UI, server actions, API routes, and advanced caching.',
-      link: 'https://dev-events-nextjs16-eight.vercel.app/',
-    },
-    {
-      Image: '/enigme-redesign.png',
-      title: 'Enigme Telecom -Redesign-',
-      Description:
-        'Enigme Telecom is a professional website showcasing telecommunication and IT services, including IP telephony, network cabling, and security systems. It highlights the company’s expertise and reliability in delivering modern, customized solutions for businesses.',
-      link: 'https://enigmetelecom.ma/',
-    },
-    {
-      Image: '/sorezay.png',
       title: 'Sorezay',
-      Description:
-        'Sorezay is a professional and responsive website for a logistics company offering reliable transport solutions for wood, glass, packages, and heavy goods. It highlights safety, punctuality, and modern design to reflect the company’s trust and efficiency.',
+      image: '/sorezay.png',
       link: 'https://sorezay.vercel.app/',
+      description:
+        'Responsive logistics platform for specialized cargo. Features a clean, high-trust UI emphasizing safety and punctuality for enterprise transport solutions.',
+      technologies: ['Next.js', 'Responsive Design', 'Tailwind'],
     },
-  ]
+    {
+      title: 'Animal Care',
+      image: '/animal-care.png',
+      link: 'https://animal-care-sable.vercel.app/',
+      description:
+        'A compassionate pet adoption platform featuring fluid CSS animations, dynamic routing for pet profiles, and an interactive donation system.',
+      technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+    },
+    {
+      title: 'Logicraft',
+      image: '/logicraft.png',
+      link: 'https://logicraft-app.vercel.app/',
+      description:
+        'Full-service platform for US LLC formation. Features high-conversion flows, end-to-end service architecture, and integration with global payment systems like Stripe and Mercury.',
+      technologies: ['Next.js', 'Tailwind CSS', 'Business Logic'],
+    },
+    {
+      title: 'Animefier',
+      image: '/animefier.png',
+      link: 'https://animefier.vercel.app/',
+      description:
+        'A decoupled AI pipeline using Google Gemini 2.5 for vision and Pollinations.ai for synthesis. Demonstrates advanced prompt engineering and serverless AI integration.',
+      technologies: ['Next.js', 'Gemini AI', 'AI APIs', 'Tailwind'],
+    },
+    {
+      title: 'Enigme Telecom (V1)',
+      image: '/enigme.png',
+      link: 'https://enigme-xi.vercel.app/',
+      description:
+        'The initial professional showcase for Enigme Telecom, highlighting core IT services like IP telephony and network cabling with a focus on clean, accessible information design.',
+      technologies: ['Next.js', 'Tailwind CSS', 'UI/UX'],
+    },
+    {
+      title: 'Enigme Telecom (Official)',
+      image: '/enigme-redesign.png',
+      link: 'https://enigmetelecom.ma/',
+      description:
+        'The official enterprise redesign for Enigme Telecom. Optimized for production with enhanced SEO, professional branding, and a high-performance infrastructure for business clients.',
+      technologies: ['Next.js', 'SEO', 'Production Deployment'],
+    },
+
+    {
+      title: 'Dev Events',
+      image: '/dev-events.png',
+      link: 'https://dev-events-nextjs16-eight.vercel.app/',
+      description:
+        'Global discovery platform for developer events. Built with Next.js 15, utilizing Server Actions and advanced caching for real-time event tracking.',
+      technologies: ['Next.js 15', 'Server Actions', 'Caching'],
+    },
+
+  ];
 
   return (
     <div className="text-white pt-32 pb-20">
@@ -86,13 +104,13 @@ const ProjectsPage = () => {
               {/* Image Container */}
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6 bg-black/40">
                 <Image
-                  src={project.Image}
+                  src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                
+
                 {/* Float Badge */}
                 <div className="absolute bottom-4 right-4 flex gap-2">
                   <div className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-bold uppercase tracking-widest">
@@ -109,7 +127,7 @@ const ProjectsPage = () => {
                   {project.title}
                 </h2>
                 <p className="text-gray-400 text-sm md:text-base leading-relaxed line-clamp-4">
-                  {project.Description}
+                  {project.description}
                 </p>
               </div>
 
@@ -128,5 +146,3 @@ const ProjectsPage = () => {
     </div>
   )
 }
-
-export default ProjectsPage
