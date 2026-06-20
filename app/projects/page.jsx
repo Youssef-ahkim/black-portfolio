@@ -7,6 +7,14 @@ import { FiExternalLink } from 'react-icons/fi'
 export default function ProjectsPage() {
   const projects = [
     {
+      title: 'Family Lavage',
+      image: '/family-lavage.png',
+      link: 'https://familylavage.com/',
+      description:
+        'A high-performance, mobile-first mobile car wash booking PWA with full RTL/LTR multi-lingual support. Engineered with an Admin Proxy Pattern, Upstash Redis security shield, in-memory TTL caching, and an automated subscription balance engine.',
+      technologies: ['Next.js', 'PocketBase', 'Upstash Redis', 'PWA'],
+    },
+    {
       title: 'Tahanaout Poultry',
       image: '/chick-project.png',
       link: 'https://chick-project.vercel.app/',
